@@ -171,33 +171,34 @@ function generateReport(
     ? new Date(flowData.created._seconds * 1000).toLocaleString()
     : 'Unknown';
 
-  const report = `# Arcade Flow Analysis Report
+  const report = `
+# Arcade Flow Analysis Report
 
-    ## 📊 Flow Overview
+## 📊 Flow Overview
 
-    - **Flow Name**: ${flowData.name || 'N/A'}
-    - **Flow ID**: ${flowData.uploadId || 'N/A'}
-    - **Description**: ${flowData.description || 'N/A'}
-    - **Total Steps**: ${flowData.steps?.length || 0}
-    - **Created**: ${createdDate}
-    - **Analysis Date**: ${new Date().toLocaleString()}
+- **Flow Name**: ${flowData.name || 'N/A'}
+- **Flow ID**: ${flowData.uploadId || 'N/A'}
+- **Description**: ${flowData.description || 'N/A'}
+- **Total Steps**: ${flowData.steps?.length || 0}
+- **Created**: ${createdDate}
+- **Analysis Date**: ${new Date().toLocaleString()}
 
-    ## 👤 User Interactions
+## 👤 User Interactions
 
-    ${interactions.map((action, i) => `${i + 1}. ${action}`).join('\n')}
+${interactions.map((action, i) => `${i + 1}. ${action}`).join('\n')}
 
-    ## 🎯 Summary
+## 🎯 Summary
 
-    ${summary}
+${summary}
 
-    ## 🖼️ Social Media Image
+## 🖼️ Social Media Image
 
-    ![Flow Visualization](social-media-image.png)
+![Flow Visualization](social-media-image.png)
 
-    ---
+---
 
-    *Generated with GPT-4o-mini and DALL-E 3*
-    `;
+*Generated with GPT-4o-mini and DALL-E 3*
+`;
 
   const outputPath = path.join(OUTPUT_DIR, 'REPORT.md');
   fs.writeFileSync(outputPath, report);
