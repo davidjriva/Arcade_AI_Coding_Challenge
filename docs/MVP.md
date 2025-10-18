@@ -373,9 +373,9 @@ npm run dev
 
 ### Expected Costs (per run without cache)
 
-- GPT-4 analysis: ~$0.10-0.30
-- DALL-E 3: ~$0.04
-- **Total: ~$0.14-0.34 per full run**
+- GPT-4 analysis: ~$0.01
+- DALL-E 3: ~$0.02
+- **Total: ~$0.03 per full run**
 - **With cache: $0.00 for repeated runs** ✅
 
 ## ✅ Success Checklist
