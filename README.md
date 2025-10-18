@@ -1,19 +1,16 @@
-# Arcade AI Coding Challenge - MVP Solution
+# Arcade AI Coding Challenge - Complete Solution
 
-My submission for Arcade's AI Coding Challenge.
+My submission for Arcade's AI Coding Challenge with backend analysis and web frontend.
 
-## Features
+## 🎯 Features
 
 This solution analyzes Arcade flow recordings and generates:
 
-1. A human-readable list of interactions in chronological order.
-2. An AI-generated description of user goals.
-3. Professional image suitable for sharing across social media.
-
-4. **Human-readable user interactions** - Chronological list of all actions
-5. **Flow summary** - AI-generated description of user goals
-6. **Social media image** - Professional image suitable for sharing
-7. **Markdown report** - Complete analysis in `output/REPORT.md`
+1. **Human-readable user interactions** - Chronological list of all actions
+2. **Flow summary** - AI-generated description of user goals
+3. **Social media image** - Professional, brand-aware image for sharing
+4. **Markdown report** - Complete analysis in `output/REPORT.md`
+5. **Web interface** - Beautiful Material-UI frontend to view reports
 
 ## Quick Start
 
@@ -38,6 +35,8 @@ npm install
 
 ### Usage
 
+#### Backend Analysis
+
 ```bash
 # Run analysis (development mode)
 npm run dev
@@ -46,8 +45,21 @@ npm run dev
 npm run build
 npm start
 
-# Or use the combined (build + start) command
+# Or use the combined command
 npm run analyze
+```
+
+#### Web Frontend
+
+```bash
+# Start the Next.js development server
+npm run web
+
+# Open http://localhost:3000 in your browser
+
+# Build for production
+npm run web:build
+npm run web:start
 ```
 
 ### Output
@@ -64,37 +76,71 @@ The solution includes smart caching:
 - **Subsequent runs**: $0.00 (uses cache)
 - Clear cache: `rm -rf cache/`
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 /
-├── src/
-│   ├── index.ts              # Main script
-│   └── types.ts              # TypeScript interfaces
+├── src/                      # Backend analysis
+│   ├── index.ts             # Main analysis script
+│   └── types.ts             # TypeScript interfaces
+├── app/                      # Next.js frontend
+│   ├── page.tsx             # Main page with MUI theme
+│   ├── layout.tsx           # Root layout
+│   ├── components/
+│   │   └── ReportViewer.tsx # Report display component
+│   └── api/
+│       ├── report/
+│       │   └── route.ts     # API to read cached data
+│       └── static/
+│           └── [...path]/
+│               └── route.ts # Serve output files
 ├── data/
 │   └── flow.json            # Input flow data
-├── cache/                    # Cached API responses
-├── output/                   # Generated image and analysis report
-├── docs/                     # Documentation
-│   ├── MVP.md               # MVP plan
-│   └── INTERVIEW_SPECIFICATION.md # Instructions for Arcade AI interview
-├── .env.local               # API keys (not committed)
+├── cache/                   # Cached API responses
+├── output/                  # Generated files
+│   ├── REPORT.md           # Markdown report
+│   └── social-media-image.png # AI-generated image
+├── docs/                    # Documentation
+│   ├── MVP.md              # MVP implementation plan
+│   ├── FRONTEND_PLAN.md    # Frontend architecture
+│   └── INTERVIEW_SPECIFICATION.md
+└── .env.local              # API keys (gitignored)
 ```
 
-## Technology Stack
+## 🛠️ Technology Stack
+
+**Backend:**
 
 - **TypeScript** - Type-safe code
 - **OpenAI SDK** - GPT-4o-mini for analysis, DALL-E 3 for images
 - **Node.js** - Runtime environment
 - **File-based caching** - Cost optimization
 
-## Available Scripts
+**Frontend:**
 
-- `npm run dev` - Run with ts-node (development)
-- `npm run build` - Compile TypeScript
+- **Next.js 14** - React framework with App Router
+- **Material-UI (MUI)** - React component library
+- **Emotion** - CSS-in-JS styling
+- **TypeScript** - Type safety across the stack
+
+## 📜 Available Scripts
+
+**Backend:**
+
+- `npm run dev` - Run analysis with ts-node (development)
+- `npm run build` - Compile TypeScript backend
 - `npm start` - Run compiled JavaScript
-- `npm run analyze` - Build and run
-- `npm run lint` - Check code quality
+- `npm run analyze` - Build and run backend
+
+**Frontend:**
+
+- `npm run web` - Start Next.js dev server (port 3000)
+- `npm run web:build` - Build Next.js for production
+- `npm run web:start` - Start Next.js production server
+
+**Code Quality:**
+
+- `npm run lint` - Check code quality with ESLint
 - `npm run format` - Format code with Prettier
 
 ## Security
