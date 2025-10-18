@@ -164,8 +164,7 @@ async function generateSocialImage(
 function generateReport(
   flowData: FlowData,
   interactions: string[],
-  summary: string,
-  imagePath: string
+  summary: string
 ): void {
   console.log('  → Generating markdown report...');
 
@@ -175,31 +174,31 @@ function generateReport(
 
   const report = `# Arcade Flow Analysis Report
 
-## 📊 Flow Overview
+    ## 📊 Flow Overview
 
-- **Flow Name**: ${flowData.name || 'N/A'}
-- **Flow ID**: ${flowData.uploadId || 'N/A'}
-- **Description**: ${flowData.description || 'N/A'}
-- **Total Steps**: ${flowData.steps?.length || 0}
-- **Created**: ${createdDate}
-- **Analysis Date**: ${new Date().toLocaleString()}
+    - **Flow Name**: ${flowData.name || 'N/A'}
+    - **Flow ID**: ${flowData.uploadId || 'N/A'}
+    - **Description**: ${flowData.description || 'N/A'}
+    - **Total Steps**: ${flowData.steps?.length || 0}
+    - **Created**: ${createdDate}
+    - **Analysis Date**: ${new Date().toLocaleString()}
 
-## 👤 User Interactions
+    ## 👤 User Interactions
 
-${interactions.map((action, i) => `${i + 1}. ${action}`).join('\n')}
+    ${interactions.map((action, i) => `${i + 1}. ${action}`).join('\n')}
 
-## 🎯 Summary
+    ## 🎯 Summary
 
-${summary}
+    ${summary}
 
-## 🖼️ Social Media Image
+    ## 🖼️ Social Media Image
 
-![Flow Visualization](${imagePath})
+    ![Flow Visualization](social-media-image.png)
 
----
+    ---
 
-*Generated with GPT-4o-mini and DALL-E 3*
-`;
+    *Generated with GPT-4o-mini and DALL-E 3*
+    `;
 
   const outputPath = path.join(OUTPUT_DIR, 'REPORT.md');
   fs.writeFileSync(outputPath, report);
@@ -245,7 +244,7 @@ async function main() {
 
     // Generate report
     console.log('📄 Generating report...');
-    generateReport(flowData, interactions, summary, imagePath);
+    generateReport(flowData, interactions, summary);
 
     console.log('\n✅ Analysis complete! Check REPORT.md for results.');
     console.log('💡 Run again to use cached results (no API calls needed).\n');
