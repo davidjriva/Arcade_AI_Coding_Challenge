@@ -1,11 +1,23 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs-extra';
 import path from 'path';
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
-    // Read cached interaction data
+    // Get reportId from query params (e.g., /api/report?id=flow-123456)
+    const searchParams = request.nextUrl.searchParams;
+    const reportId = searchParams.get('id') || 'flow'; // Default to 'flow' for legacy support
+
+    // Determine paths based on reportId
+    const flowPath = path.join(process.cwd(), 'data', `${reportId}.json`);
     const cacheDir = path.join(process.cwd(), 'cache');
+
+    // Check if flow file exists
+    if (!fs.existsSync(flowPath)) {
+      return NextResponse.json({ error: 'Report not found' }, { status: 404 });
+    }
+
+    // Read cached interaction data
     const cacheFiles = fs.readdirSync(cacheDir);
 
     // Find interaction and summary caches
@@ -24,9 +36,7 @@ export async function GET() {
     }
 
     // Read flow data
-    const flowData = JSON.parse(
-      fs.readFileSync(path.join(process.cwd(), 'data/flow.json'), 'utf-8')
-    );
+    const flowData = JSON.parse(fs.readFileSync(flowPath, 'utf-8'));
 
     return NextResponse.json({
       flowName: flowData.name || 'Unknown Flow',
@@ -34,7 +44,7 @@ export async function GET() {
       totalSteps: flowData.steps?.length || 0,
       interactions,
       summary,
-      imagePath: '/output/social-media-image.png',
+      imagePath: `/output/${reportId === 'flow' ? '' : `${reportId}/`}social-media-image.png`,
       createdAt: flowData.created
         ? new Date(flowData.created._seconds * 1000).toISOString()
         : null,

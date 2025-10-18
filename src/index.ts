@@ -7,9 +7,9 @@ import { FlowData } from './types';
 
 dotenv.config({ path: '.env.local' });
 
-const CACHE_DIR = './cache';
-const OUTPUT_DIR = './output';
-const FLOW_FILE = './data/flow.json';
+const CACHE_DIR = process.env.CACHE_DIR || './cache';
+const OUTPUT_DIR = process.env.OUTPUT_DIR || './output';
+const FLOW_FILE = process.env.FLOW_FILE || './data/flow.json';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -121,8 +121,20 @@ async function generateSocialImage(
 ): Promise<string> {
   const cacheKey = getCacheKey({ fn: 'image', summary });
   const cached = getCache(cacheKey);
+
+  // Define the target path for this specific report
+  fs.ensureDirSync(OUTPUT_DIR);
+  const targetImagePath = path.join(OUTPUT_DIR, 'social-media-image.png');
+
+  // If cached, copy the image to the new location
   if (cached && typeof cached === 'string' && fs.existsSync(cached)) {
-    return cached;
+    // If it's already in the right location, just return it
+    if (cached === targetImagePath) {
+      return cached;
+    }
+    // Otherwise, copy it to the new output directory
+    fs.copyFileSync(cached, targetImagePath);
+    return targetImagePath;
   }
 
   console.log('  → Calling DALL-E 3 to generate social media image...');
@@ -152,12 +164,10 @@ async function generateSocialImage(
   const imageResponse = await fetch(imageUrl);
   const buffer = Buffer.from(await imageResponse.arrayBuffer());
 
-  fs.ensureDirSync(OUTPUT_DIR);
-  const imagePath = path.join(OUTPUT_DIR, 'social-media-image.png');
-  fs.writeFileSync(imagePath, buffer);
+  fs.writeFileSync(targetImagePath, buffer);
 
-  setCache(cacheKey, imagePath);
-  return imagePath;
+  setCache(cacheKey, targetImagePath);
+  return targetImagePath;
 }
 
 function generateReport(

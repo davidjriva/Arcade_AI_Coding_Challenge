@@ -2,7 +2,8 @@
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import HomePage from './components/HomePage';
+import ReportViewer from '../../components/ReportViewer';
+import { use } from 'react';
 
 const theme = createTheme({
   palette: {
@@ -31,11 +32,17 @@ const theme = createTheme({
   },
 });
 
-export default function Home() {
+interface PageProps {
+  params: Promise<{ id: string }>;
+}
+
+export default function ReportPage({ params }: PageProps) {
+  const { id } = use(params);
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <HomePage />
+      <ReportViewer reportId={id} />
     </ThemeProvider>
   );
 }

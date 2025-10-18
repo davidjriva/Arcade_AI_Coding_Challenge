@@ -17,13 +17,16 @@ import {
   Paper,
   Divider,
   Alert,
+  Button,
 } from '@mui/material';
 import {
   Timeline,
   Assessment,
   CalendarToday,
   Insights,
+  ArrowBack,
 } from '@mui/icons-material';
+import { useRouter } from 'next/navigation';
 
 interface ReportData {
   flowName: string;
@@ -35,13 +38,19 @@ interface ReportData {
   createdAt: string | null;
 }
 
-export default function ReportViewer() {
+interface ReportViewerProps {
+  reportId?: string;
+}
+
+export default function ReportViewer({ reportId }: ReportViewerProps) {
+  const router = useRouter();
   const [report, setReport] = useState<ReportData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch('/api/report')
+    const url = reportId ? `/api/report?id=${reportId}` : '/api/report';
+    fetch(url)
       .then((res) => {
         if (!res.ok) throw new Error('Failed to load report');
         return res.json();
@@ -54,7 +63,7 @@ export default function ReportViewer() {
         setError(err.message);
         setLoading(false);
       });
-  }, []);
+  }, [reportId]);
 
   if (loading) {
     return (
@@ -82,6 +91,22 @@ export default function ReportViewer() {
   return (
     <Box sx={{ bgcolor: 'background.default', minHeight: '100vh', py: 6 }}>
       <Container maxWidth="lg">
+        {/* Back Button */}
+        <Box mb={4}>
+          <Button
+            startIcon={<ArrowBack />}
+            onClick={() => router.push('/')}
+            variant="outlined"
+            sx={{
+              borderRadius: 2,
+              textTransform: 'none',
+              fontWeight: 'bold',
+            }}
+          >
+            Back to Home
+          </Button>
+        </Box>
+
         {/* Header */}
         <Box textAlign="center" mb={6}>
           <Typography
