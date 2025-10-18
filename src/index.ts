@@ -127,15 +127,14 @@ async function generateSocialImage(
 
   console.log('  → Calling DALL-E 3 to generate social media image...');
 
-  const imagePrompt = `Create a professional social media image for this e-commerce workflow:
+  const imagePrompt = `Create a modern social media graphic about: ${summary}
 
-    Workflow: ${flowData.name || 'Shopping flow'}
-    Summary: ${summary}
+    IMPORTANT: USE ONLY VISUAL SYMBOLS AND ICONS - **ABSOLUTELY NO TEXT, LETTERS, OR NUMBERS**.
+    Style: Clean, minimalist, use the brand colors of the company mentioned above (i.e. Target has brand colors of red & white).
+    Composition: Simple icons and geometric shapes floating on a gradient background
+    Aesthetic: Professional tech startup illustration, abstract and symbolic
 
-    Style: Modern, clean, tech-focused, professional, colorful
-    Suitable for: LinkedIn, Twitter, product announcements
-    Include: Visual metaphor or illustration representing online shopping and the workflow
-    Make it eye-catching and engaging for social media`;
+    Create an eye-catching abstract illustration.`;
 
   const response = await openai.images.generate({
     model: 'dall-e-3',
