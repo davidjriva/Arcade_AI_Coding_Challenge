@@ -81,3 +81,16 @@ examples/               # Sample flow files
 - OpenAI (GPT-4o-mini for analysis, DALL-E 3 for images)
 - File-based caching with MD5 hashing
 - Node.js backend with modular React components
+
+## Future Improvements
+
+- GPT-4 vision integration:
+  - Analyze screenshots from flow steps instead of just metadata.
+  - Provide much richer, more accurate analysis.
+- Compare multiple flows:
+  - Side-by-side comparison view.
+  - Use AI to identify common patterns across different user journeys.
+  - Useful for A/B testing or tracking UX changes over time.
+- Search and filter reports.
+- Export reports as PDF.
+- Bulk upload multiple flows & process in parallel.
