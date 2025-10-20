@@ -9,7 +9,8 @@ dotenv.config({ path: '.env.local' });
 
 const CACHE_DIR = process.env.CACHE_DIR || './cache';
 const OUTPUT_DIR = process.env.OUTPUT_DIR || './output';
-const FLOW_FILE = process.env.FLOW_FILE || './data/flow.json';
+const FLOW_FILE =
+  process.env.FLOW_FILE || './examples/flow-target-scooter.json';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -251,6 +252,20 @@ async function main() {
     console.log('🎨 Creating social media image...');
     const imagePath = await generateSocialImage(flowData, summary);
     console.log(`  ✓ Image saved: ${imagePath}\n`);
+
+    // Save cache metadata for this report
+    const interactionsCacheKey = getCacheKey({
+      fn: 'interactions',
+      data: flowData,
+    });
+    const summaryCacheKey = getCacheKey({ fn: 'summary', interactions });
+    const metadata = {
+      interactionsCacheKey,
+      summaryCacheKey,
+      generatedAt: new Date().toISOString(),
+    };
+    const metadataPath = path.join(OUTPUT_DIR, 'cache-metadata.json');
+    fs.writeFileSync(metadataPath, JSON.stringify(metadata, null, 2));
 
     // Generate report
     console.log('📄 Generating report...');
