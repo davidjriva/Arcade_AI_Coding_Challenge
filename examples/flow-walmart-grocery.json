@@ -1,0 +1,776 @@
+{
+  "createdBy": "abcde123456",
+  "externalName": null,
+  "description": "",
+  "schemaVersion": "1.1.0",
+  "cta": {},
+  "editors": [],
+  "optimizeFlowForMobileView": true,
+  "folderId": null,
+  "themeId": null,
+  "menu": null,
+  "showCaptions": true,
+  "teamId": "6cleoKGEaAz9hBaGgDGG",
+  "showFlowNavIndicator": "AUTO",
+  "flowWrapper": 1,
+  "customCursor": 1,
+  "font": "Inter",
+  "showStartOverlay": false,
+  "showBackNextButtons": false,
+  "startOverlayButtonText": "",
+  "autoplay": {
+    "enabled": false,
+    "delay": null
+  },
+  "backgroundMusicUrl": null,
+  "backgroundMusicVolume": 1,
+  "sharePageLayout": {
+    "type": "arcade-only",
+    "showHeader": true,
+    "showLogo": true,
+    "showButton": true
+  },
+  "useVersioning": false,
+  "createdWith": "extension/1.5.9",
+  "uploadId": "WMT001GroceryDelivery",
+  "hasUsedAI": true,
+  "created": {
+    "_seconds": 1729271200,
+    "_nanoseconds": 124000000
+  },
+  "capturedEvents": [
+    {
+      "type": "click",
+      "clickId": "search-click",
+      "frameX": 920.3,
+      "frameY": 78.5,
+      "timeMs": 1729271203245,
+      "tabId": 471877759,
+      "frameId": 0
+    },
+    {
+      "type": "typing",
+      "startTimeMs": 1729271204000,
+      "endTimeMs": 1729271205800,
+      "tabId": 471877759,
+      "frameId": 0
+    },
+    {
+      "type": "click",
+      "clickId": "department-filter",
+      "frameX": 280.5,
+      "frameY": 320.2,
+      "timeMs": 1729271207500,
+      "tabId": 471877759,
+      "frameId": 0
+    },
+    {
+      "type": "scrolling",
+      "startTimeMs": 1729271208200,
+      "endTimeMs": 1729271210800,
+      "tabId": 471877759,
+      "frameId": 0
+    },
+    {
+      "type": "click",
+      "clickId": "product-select",
+      "frameX": 650.8,
+      "frameY": 480.3,
+      "timeMs": 1729271212000,
+      "tabId": 471877759,
+      "frameId": 0
+    },
+    {
+      "type": "click",
+      "clickId": "quantity-change",
+      "frameX": 1080.2,
+      "frameY": 425.5,
+      "timeMs": 1729271214500,
+      "tabId": 471877759,
+      "frameId": 0
+    },
+    {
+      "type": "click",
+      "clickId": "add-to-cart-btn",
+      "frameX": 1120.5,
+      "frameY": 520.8,
+      "timeMs": 1729271216200,
+      "tabId": 471877759,
+      "frameId": 0
+    },
+    {
+      "type": "click",
+      "clickId": "continue-shopping",
+      "frameX": 850.3,
+      "frameY": 680.2,
+      "timeMs": 1729271218000,
+      "tabId": 471877759,
+      "frameId": 0
+    },
+    {
+      "type": "click",
+      "clickId": "second-product",
+      "frameX": 890.5,
+      "frameY": 420.8,
+      "timeMs": 1729271220500,
+      "tabId": 471877759,
+      "frameId": 0
+    },
+    {
+      "type": "click",
+      "clickId": "add-second-item",
+      "frameX": 1120.5,
+      "frameY": 515.3,
+      "timeMs": 1729271222800,
+      "tabId": 471877759,
+      "frameId": 0
+    },
+    {
+      "type": "click",
+      "clickId": "view-cart",
+      "frameX": 1550.8,
+      "frameY": 52.5,
+      "timeMs": 1729271225000,
+      "tabId": 471877759,
+      "frameId": 0
+    },
+    {
+      "type": "click",
+      "clickId": "checkout-btn",
+      "frameX": 1350.2,
+      "frameY": 720.5,
+      "timeMs": 1729271227500,
+      "tabId": 471877759,
+      "frameId": 0
+    }
+  ],
+  "ai": {
+    "recordingEndRequestId": "walmart-grocery-001",
+    "recordingEndVersionId": "v1-walmart-grocery"
+  },
+  "aspectRatio": 0.4880046811000585,
+  "status": 1,
+  "processedAIReason": "Success",
+  "useCase": "promotional",
+  "name": "Order Groceries for Home Delivery on Walmart.com",
+  "steps": [
+    {
+      "type": "CHAPTER",
+      "id": "intro-chapter",
+      "title": "Order Groceries for Home Delivery on Walmart.com",
+      "subtitle": "Follow along to see how easy it is to shop for fresh groceries online and schedule convenient home delivery.",
+      "theme": "light",
+      "textAlign": "left",
+      "showPreviewImage": true,
+      "showLogo": false,
+      "paths": [
+        {
+          "id": "start-path",
+          "buttonText": "Start Shopping",
+          "buttonColor": "#0071DC",
+          "buttonTextColor": "#FFFFFF",
+          "pathType": "step"
+        }
+      ]
+    },
+    {
+      "id": "homepage-search",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/0071DC/FFFFFF?text=Walmart+Homepage",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "UWQSrGog_Nxs^0aNE2ouM|jra0WFRpadr;kE",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "search-hotspot",
+          "width": 40,
+          "height": 40,
+          "label": "Click here to search for organic bananas and other fresh produce.",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#FFFFFF",
+          "bgColor": "#0071DC",
+          "x": 0.54,
+          "y": 0.094
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.walmart.com/",
+        "title": "Walmart.com | Save Money. Live Better.",
+        "description": "Shop Walmart.com for Every Day Low Prices. Free shipping on orders $35+ or Pickup in-store and get a Pickup Discount. Open a Walmart Credit Card to Save Even More!",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "input[name=\"q\"]",
+        "text": "search",
+        "elementType": "input",
+        "sections": ["Header"],
+        "originalRect": {
+          "x": 750,
+          "y": 60,
+          "width": 520,
+          "height": 48
+        }
+      },
+      "assetId": "homepage-search"
+    },
+    {
+      "id": "typing-animation",
+      "type": "VIDEO",
+      "url": "https://via.placeholder.com/video",
+      "startTimeFrac": 0.0,
+      "endTimeFrac": 0.18,
+      "playbackRate": 1,
+      "duration": 24.8,
+      "videoProcessing": false,
+      "muted": true,
+      "videoThumbnailUrl": "https://via.placeholder.com/3418x1668",
+      "size": {
+        "width": 3418,
+        "height": 1668
+      },
+      "assetId": "typing-video"
+    },
+    {
+      "id": "filter-department",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/FFFFFF/0071DC?text=Search+Results",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "UVSFhTsU%#%MysSgr?t7m+soX8ay?cayRPRj",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "filter-hotspot",
+          "width": 40,
+          "height": 40,
+          "label": "Filter by 'Fresh Produce' to find the freshest organic options.",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#FFFFFF",
+          "bgColor": "#0071DC",
+          "x": 0.164,
+          "y": 0.384
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.walmart.com/search?q=organic+bananas",
+        "title": "Walmart.com | organic bananas",
+        "description": "Shop for organic bananas at Walmart.com. Save money. Live better.",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "button[data-category=\"Fresh Produce\"]",
+        "text": "Fresh Produce",
+        "elementType": "button",
+        "sections": ["Sidebar"],
+        "originalRect": {
+          "x": 180,
+          "y": 290,
+          "width": 220,
+          "height": 40
+        }
+      },
+      "assetId": "filter-department"
+    },
+    {
+      "id": "scroll-products",
+      "type": "VIDEO",
+      "url": "https://via.placeholder.com/video",
+      "startTimeFrac": 0.18,
+      "endTimeFrac": 0.38,
+      "playbackRate": 1,
+      "duration": 24.8,
+      "videoProcessing": false,
+      "muted": true,
+      "videoThumbnailUrl": "https://via.placeholder.com/3418x1668",
+      "size": {
+        "width": 3418,
+        "height": 1668
+      },
+      "assetId": "scroll-video"
+    },
+    {
+      "id": "select-product",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/FFFFFF/0071DC?text=Product+Grid",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "UOSPU:V@%M%M_Nx]V@RPIUM{a}tR-;t8juV@",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "product-hotspot",
+          "width": 40,
+          "height": 40,
+          "label": "Click on the organic banana bunch to see nutritional info and pricing.",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#FFFFFF",
+          "bgColor": "#0071DC",
+          "x": 0.38,
+          "y": 0.576
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.walmart.com/browse/food/fresh-produce/976759_976794",
+        "title": "Fresh Produce - Walmart.com",
+        "description": "Shop for Fresh Produce at Walmart.com. Save money. Live better.",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "div[data-item-id] img.product-image",
+        "text": "Organic Bananas, Bunch",
+        "elementType": "image",
+        "sections": ["Main Content"],
+        "originalRect": {
+          "x": 420,
+          "y": 350,
+          "width": 340,
+          "height": 340
+        }
+      },
+      "assetId": "select-product"
+    },
+    {
+      "id": "product-details",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/FFFFFF/0071DC?text=Product+Details",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "UPSPR$Rjx]%M~qxuV@RjIAM{kCtR-;o#azaJ",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "quantity-hotspot",
+          "width": 40,
+          "height": 40,
+          "label": "Adjust the quantity to match your family's needs.",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#FFFFFF",
+          "bgColor": "#0071DC",
+          "x": 0.632,
+          "y": 0.51
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.walmart.com/ip/Organic-Bananas-Bunch/44390948",
+        "title": "Organic Bananas, Bunch - Walmart.com",
+        "description": "Buy Organic Bananas, Bunch at Walmart.com",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "button[data-automation-id=\"quantity-stepper-increase\"]",
+        "text": "+",
+        "elementType": "button",
+        "sections": ["Product Info"],
+        "originalRect": {
+          "x": 1050,
+          "y": 405,
+          "width": 44,
+          "height": 44
+        }
+      },
+      "assetId": "product-details"
+    },
+    {
+      "id": "add-to-cart-first",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/FFFFFF/0071DC?text=Add+to+Cart",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "UPSPR$V@x]%M_NxuRjV@D%M{oftR-;tRayRi",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "add-cart-hotspot",
+          "width": 40,
+          "height": 40,
+          "label": "Add organic bananas to your cart for delivery.",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#FFFFFF",
+          "bgColor": "#0071DC",
+          "x": 0.655,
+          "y": 0.624
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.walmart.com/ip/Organic-Bananas-Bunch/44390948",
+        "title": "Organic Bananas, Bunch - Walmart.com",
+        "description": "Buy Organic Bananas, Bunch at Walmart.com",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "button[data-automation-id=\"add-to-cart-button\"]",
+        "text": "Add to cart",
+        "elementType": "button",
+        "sections": ["Product Info"],
+        "originalRect": {
+          "x": 1020,
+          "y": 495,
+          "width": 320,
+          "height": 48
+        }
+      },
+      "assetId": "add-to-cart-first"
+    },
+    {
+      "id": "cart-modal",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/0071DC/FFFFFF?text=Item+Added",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "UaG92400~q9ZxuRjt7V@j[WBkCf6oKbbjZbH",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "continue-shopping-hotspot",
+          "width": 40,
+          "height": 40,
+          "label": "Continue shopping to add fresh strawberries to your order.",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#FFFFFF",
+          "bgColor": "#0071DC",
+          "x": 0.498,
+          "y": 0.816
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.walmart.com/ip/Organic-Bananas-Bunch/44390948",
+        "title": "Organic Bananas, Bunch - Walmart.com",
+        "description": "Buy Organic Bananas, Bunch at Walmart.com",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "button[data-automation=\"continue-shopping\"]",
+        "text": "Continue shopping",
+        "elementType": "button",
+        "sections": ["Modal"],
+        "originalRect": {
+          "x": 720,
+          "y": 655,
+          "width": 280,
+          "height": 44
+        }
+      },
+      "assetId": "cart-modal"
+    },
+    {
+      "id": "second-product-page",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/FFFFFF/0071DC?text=Strawberries",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "UOSPU:Vt%M%f~qx]RjVtD%M{kCxu.7t7e:Rj",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "strawberries-hotspot",
+          "width": 40,
+          "height": 40,
+          "label": "Select fresh organic strawberries for a healthy snack.",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#FFFFFF",
+          "bgColor": "#0071DC",
+          "x": 0.52,
+          "y": 0.504
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.walmart.com/browse/food/fresh-produce/976759_976794",
+        "title": "Fresh Produce - Walmart.com",
+        "description": "Shop for Fresh Produce at Walmart.com. Save money. Live better.",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "div[data-item-id=\"strawberries\"] img",
+        "text": "Organic Strawberries, 1 lb",
+        "elementType": "image",
+        "sections": ["Main Content"],
+        "originalRect": {
+          "x": 670,
+          "y": 300,
+          "width": 340,
+          "height": 340
+        }
+      },
+      "assetId": "second-product-page"
+    },
+    {
+      "id": "add-second-item",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/FFFFFF/0071DC?text=Strawberry+Details",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "UPSPR$V@x]%M_NxuRjV@D%M{oftR-;tRayRi",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "add-strawberries-hotspot",
+          "width": 40,
+          "height": 40,
+          "label": "Add strawberries to complete your fresh fruit selection.",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#FFFFFF",
+          "bgColor": "#0071DC",
+          "x": 0.655,
+          "y": 0.618
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.walmart.com/ip/Organic-Strawberries-1-lb/555051823",
+        "title": "Organic Strawberries, 1 lb - Walmart.com",
+        "description": "Buy Organic Strawberries, 1 lb at Walmart.com",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "button[data-automation-id=\"add-to-cart-button\"]",
+        "text": "Add to cart",
+        "elementType": "button",
+        "sections": ["Product Info"],
+        "originalRect": {
+          "x": 1020,
+          "y": 490,
+          "width": 320,
+          "height": 48
+        }
+      },
+      "assetId": "add-second-item"
+    },
+    {
+      "id": "view-cart-nav",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/0071DC/FFFFFF?text=Cart+Badge",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "U5SiNz_Nxu^+@FQ-V@t700RP%MjGy@yDa0sA",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "cart-icon-hotspot",
+          "width": 40,
+          "height": 40,
+          "label": "Click the cart icon to review your items and schedule delivery.",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#FFFFFF",
+          "bgColor": "#0071DC",
+          "x": 0.906,
+          "y": 0.063
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.walmart.com/ip/Organic-Strawberries-1-lb/555051823",
+        "title": "Organic Strawberries, 1 lb - Walmart.com",
+        "description": "Buy Organic Strawberries, 1 lb at Walmart.com",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "a[data-automation-id=\"cart-icon\"]",
+        "text": "2",
+        "elementType": "link",
+        "sections": ["Header"],
+        "originalRect": {
+          "x": 1530,
+          "y": 35,
+          "width": 50,
+          "height": 50
+        }
+      },
+      "assetId": "view-cart-nav"
+    },
+    {
+      "id": "navigation-video",
+      "type": "VIDEO",
+      "url": "https://via.placeholder.com/video",
+      "startTimeFrac": 0.7,
+      "endTimeFrac": 0.85,
+      "playbackRate": 1.2,
+      "duration": 24.8,
+      "videoProcessing": false,
+      "muted": true,
+      "videoThumbnailUrl": "https://via.placeholder.com/3418x1668",
+      "size": {
+        "width": 3418,
+        "height": 1668
+      },
+      "assetId": "nav-video"
+    },
+    {
+      "id": "cart-page-checkout",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/FFFFFF/0071DC?text=Shopping+Cart",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "U5SiNz_Nxu^+@FQ-V@t700RP%MjGy@yDa0sA",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "checkout-hotspot",
+          "width": 40,
+          "height": 40,
+          "label": "Proceed to checkout to schedule your delivery window.",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#FFFFFF",
+          "bgColor": "#0071DC",
+          "x": 0.79,
+          "y": 0.864
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.walmart.com/cart",
+        "title": "Cart - Walmart.com",
+        "description": "",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "button[data-automation-id=\"checkout-button\"]",
+        "text": "Continue to checkout",
+        "elementType": "button",
+        "sections": ["Cart Summary"],
+        "originalRect": {
+          "x": 1200,
+          "y": 695,
+          "width": 380,
+          "height": 48
+        }
+      },
+      "assetId": "cart-page-checkout"
+    },
+    {
+      "id": "final-transition-video",
+      "type": "VIDEO",
+      "url": "https://via.placeholder.com/video",
+      "startTimeFrac": 0.85,
+      "endTimeFrac": 1,
+      "playbackRate": 1.5,
+      "duration": 24.8,
+      "videoProcessing": false,
+      "muted": true,
+      "videoThumbnailUrl": "https://via.placeholder.com/3418x1668",
+      "size": {
+        "width": 3418,
+        "height": 1668
+      },
+      "assetId": "final-video"
+    },
+    {
+      "id": "checkout-page",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/FFFFFF/0071DC?text=Checkout",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "U5SiNz_Nxu^+@FQ-V@t700RP%MjGy@yDa0sA",
+      "hotspots": [],
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "pageContext": {
+        "url": "https://www.walmart.com/checkout",
+        "title": "Checkout - Walmart.com",
+        "description": "",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "assetId": "checkout-page"
+    },
+    {
+      "type": "CHAPTER",
+      "id": "outro-chapter",
+      "title": "Fresh groceries delivered to your door!",
+      "subtitle": "Complete your order and enjoy same-day or next-day delivery. Save time and eat healthy with Walmart grocery delivery.",
+      "theme": "light",
+      "paths": [
+        {
+          "id": "end-path",
+          "buttonText": "Shop Walmart Grocery",
+          "buttonColor": "#0071DC",
+          "buttonTextColor": "#FFFFFF",
+          "url": "https://www.walmart.com/grocery",
+          "pathType": "url"
+        }
+      ]
+    }
+  ],
+  "processedAI": true,
+  "lastModifiedBy": "abcde123456",
+  "modified": {
+    "_seconds": 1729271350,
+    "_nanoseconds": 504000000
+  },
+  "customVariables": {
+    "first_name": {
+      "fallback": "",
+      "createdAt": {
+        "_seconds": 1729271349,
+        "_nanoseconds": 712000000
+      }
+    },
+    "company_name": {
+      "fallback": "",
+      "createdAt": {
+        "_seconds": 1729271349,
+        "_nanoseconds": 722000000
+      }
+    }
+  }
+}

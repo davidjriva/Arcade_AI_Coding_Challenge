@@ -1,0 +1,479 @@
+{
+  "createdBy": "abcde123456",
+  "externalName": null,
+  "description": "",
+  "schemaVersion": "1.1.0",
+  "cta": {},
+  "editors": [],
+  "optimizeFlowForMobileView": true,
+  "folderId": null,
+  "themeId": null,
+  "menu": null,
+  "showCaptions": true,
+  "teamId": "6cleoKGEaAz9hBaGgDGG",
+  "showFlowNavIndicator": "AUTO",
+  "flowWrapper": 1,
+  "customCursor": 1,
+  "font": "Inter",
+  "showStartOverlay": false,
+  "showBackNextButtons": false,
+  "startOverlayButtonText": "",
+  "autoplay": {
+    "enabled": false,
+    "delay": null
+  },
+  "backgroundMusicUrl": null,
+  "backgroundMusicVolume": 1,
+  "sharePageLayout": {
+    "type": "arcade-only",
+    "showHeader": true,
+    "showLogo": true,
+    "showButton": true
+  },
+  "useVersioning": false,
+  "createdWith": "extension/1.5.9",
+  "uploadId": "AMZ001HeadphonesFlow",
+  "hasUsedAI": true,
+  "created": {
+    "_seconds": 1729270800,
+    "_nanoseconds": 124000000
+  },
+  "capturedEvents": [
+    {
+      "type": "click",
+      "clickId": "search-bar-click",
+      "frameX": 950.5,
+      "frameY": 65.2,
+      "timeMs": 1729270803245,
+      "tabId": 471877758,
+      "frameId": 0
+    },
+    {
+      "type": "typing",
+      "startTimeMs": 1729270804000,
+      "endTimeMs": 1729270805500,
+      "tabId": 471877758,
+      "frameId": 0
+    },
+    {
+      "type": "click",
+      "clickId": "product-click",
+      "frameX": 680.3,
+      "frameY": 420.8,
+      "timeMs": 1729270807200,
+      "tabId": 471877758,
+      "frameId": 0
+    },
+    {
+      "type": "scrolling",
+      "startTimeMs": 1729270808000,
+      "endTimeMs": 1729270810500,
+      "tabId": 471877758,
+      "frameId": 0
+    },
+    {
+      "type": "click",
+      "clickId": "color-select",
+      "frameX": 720.5,
+      "frameY": 385.2,
+      "timeMs": 1729270811800,
+      "tabId": 471877758,
+      "frameId": 0
+    },
+    {
+      "type": "click",
+      "clickId": "add-to-cart",
+      "frameX": 1150.2,
+      "frameY": 520.5,
+      "timeMs": 1729270813500,
+      "tabId": 471877758,
+      "frameId": 0
+    },
+    {
+      "type": "click",
+      "clickId": "cart-icon",
+      "frameX": 1580.8,
+      "frameY": 48.3,
+      "timeMs": 1729270815200,
+      "tabId": 471877758,
+      "frameId": 0
+    }
+  ],
+  "ai": {
+    "recordingEndRequestId": "amazon-headphones-001",
+    "recordingEndVersionId": "v1-amazon-headphones"
+  },
+  "aspectRatio": 0.4880046811000585,
+  "status": 1,
+  "processedAIReason": "Success",
+  "useCase": "promotional",
+  "name": "Buy Sony Wireless Headphones on Amazon",
+  "steps": [
+    {
+      "type": "CHAPTER",
+      "id": "chapter-intro",
+      "title": "Buy Sony Wireless Headphones on Amazon",
+      "subtitle": "Discover how to search, compare, and purchase premium wireless headphones with Amazon Prime benefits.",
+      "theme": "light",
+      "textAlign": "left",
+      "showPreviewImage": true,
+      "showLogo": false,
+      "paths": [
+        {
+          "id": "path-start",
+          "buttonText": "Start Shopping",
+          "buttonColor": "#FF9900",
+          "buttonTextColor": "#232F3E",
+          "pathType": "step"
+        }
+      ]
+    },
+    {
+      "id": "step-search-bar",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/232F3E/FFFFFF?text=Amazon+Homepage",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "UWQSrGog_Nxs^0aNE2ouM|jra0WFRpadr;kE",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "hotspot-search",
+          "width": 40,
+          "height": 40,
+          "label": "Click the search bar to find your perfect wireless headphones.",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#232F3E",
+          "bgColor": "#FF9900",
+          "x": 0.55,
+          "y": 0.08
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.amazon.com/",
+        "title": "Amazon.com. Spend less. Smile more.",
+        "description": "Free shipping on millions of items. Get the best of Shopping and Entertainment with Prime. Enjoy low prices and great deals on the largest selection of everyday essentials and other products.",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "input[id=\"twotabsearchtextbox\"]",
+        "text": "search",
+        "elementType": "input",
+        "sections": ["Header"],
+        "originalRect": {
+          "x": 720,
+          "y": 50,
+          "width": 580,
+          "height": 44
+        }
+      },
+      "assetId": "step-search-bar"
+    },
+    {
+      "id": "step-typing-video",
+      "type": "VIDEO",
+      "url": "https://via.placeholder.com/video",
+      "startTimeFrac": 0.0024806654020137165,
+      "endTimeFrac": 0.25,
+      "playbackRate": 1,
+      "duration": 20.5,
+      "videoProcessing": false,
+      "muted": true,
+      "videoThumbnailUrl": "https://via.placeholder.com/3418x1668",
+      "size": {
+        "width": 3418,
+        "height": 1668
+      },
+      "assetId": "video-typing"
+    },
+    {
+      "id": "step-product-grid",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/FFFFFF/232F3E?text=Search+Results",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "UVSFhTsU%#%MysSgr?t7m+soX8ay?cayRPRj",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "hotspot-product",
+          "width": 40,
+          "height": 40,
+          "label": "Select the Sony WH-1000XM5 to see detailed specs and customer reviews.",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#232F3E",
+          "bgColor": "#FF9900",
+          "x": 0.4,
+          "y": 0.5
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.amazon.com/s?k=sony+wireless+headphones",
+        "title": "Amazon.com: sony wireless headphones",
+        "description": "Shop for sony wireless headphones at Amazon.com. Free Shipping on eligible items.",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "div.s-product-image-container img",
+        "text": "Sony WH-1000XM5",
+        "elementType": "image",
+        "sections": ["Main Content"],
+        "originalRect": {
+          "x": 480,
+          "y": 250,
+          "width": 400,
+          "height": 400
+        }
+      },
+      "assetId": "step-product-grid"
+    },
+    {
+      "id": "step-scroll-video",
+      "type": "VIDEO",
+      "url": "https://via.placeholder.com/video",
+      "startTimeFrac": 0.25,
+      "endTimeFrac": 0.45,
+      "playbackRate": 1,
+      "duration": 20.5,
+      "videoProcessing": false,
+      "muted": true,
+      "videoThumbnailUrl": "https://via.placeholder.com/3418x1668",
+      "size": {
+        "width": 3418,
+        "height": 1668
+      },
+      "assetId": "video-scroll"
+    },
+    {
+      "id": "step-product-page",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/FFFFFF/232F3E?text=Product+Details",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "UOSPU:V@%M%M_Nx]V@RPIUM{a}tR-;t8juV@",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "hotspot-color",
+          "width": 40,
+          "height": 40,
+          "label": "Choose your favorite color - Black, Silver, or Midnight Blue.",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#232F3E",
+          "bgColor": "#FF9900",
+          "x": 0.42,
+          "y": 0.46
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.amazon.com/dp/B0BXAMPLE",
+        "title": "Sony WH-1000XM5 Wireless Noise Cancelling Headphones",
+        "description": "Industry-leading noise cancellation with Auto NC Optimizer. Crystal clear hands-free calling. Up to 30-hour battery life.",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "div#variation_color_name img",
+        "text": "Black",
+        "elementType": "image",
+        "sections": ["Product Details"],
+        "originalRect": {
+          "x": 680,
+          "y": 360,
+          "width": 72,
+          "height": 72
+        }
+      },
+      "assetId": "step-product-page"
+    },
+    {
+      "id": "step-add-to-cart-button",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/FFFFFF/232F3E?text=Add+to+Cart",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "UPSPR$Rjx]%M~qxuV@RjIAM{kCtR-;o#azaJ",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "hotspot-add-cart",
+          "width": 40,
+          "height": 40,
+          "label": "Add to your cart and enjoy free Prime shipping!",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#232F3E",
+          "bgColor": "#FF9900",
+          "x": 0.67,
+          "y": 0.62
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.amazon.com/dp/B0BXAMPLE",
+        "title": "Sony WH-1000XM5 Wireless Noise Cancelling Headphones",
+        "description": "Industry-leading noise cancellation with Auto NC Optimizer. Crystal clear hands-free calling. Up to 30-hour battery life.",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "input#add-to-cart-button",
+        "text": "Add to Cart",
+        "elementType": "button",
+        "sections": ["Product Details"],
+        "originalRect": {
+          "x": 1050,
+          "y": 490,
+          "width": 280,
+          "height": 44
+        }
+      },
+      "assetId": "step-add-to-cart-button"
+    },
+    {
+      "id": "step-cart-icon",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/232F3E/FFFFFF?text=Cart+Updated",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "UPSPR$V@x]%M_NxuRjV@D%M{oftR-;tRayRi",
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "hotspots": [
+        {
+          "id": "hotspot-cart",
+          "width": 40,
+          "height": 40,
+          "label": "View your cart to proceed to checkout and complete your purchase.",
+          "style": "pulsating",
+          "defaultOpen": true,
+          "textColor": "#232F3E",
+          "bgColor": "#FF9900",
+          "x": 0.92,
+          "y": 0.058
+        }
+      ],
+      "pageContext": {
+        "url": "https://www.amazon.com/dp/B0BXAMPLE",
+        "title": "Sony WH-1000XM5 Wireless Noise Cancelling Headphones",
+        "description": "Industry-leading noise cancellation with Auto NC Optimizer. Crystal clear hands-free calling. Up to 30-hour battery life.",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "clickContext": {
+        "cssSelector": "a#nav-cart",
+        "text": "1",
+        "elementType": "link",
+        "sections": ["Header"],
+        "originalRect": {
+          "x": 1560,
+          "y": 30,
+          "width": 50,
+          "height": 50
+        }
+      },
+      "assetId": "step-cart-icon"
+    },
+    {
+      "id": "step-final-video",
+      "type": "VIDEO",
+      "url": "https://via.placeholder.com/video",
+      "startTimeFrac": 0.75,
+      "endTimeFrac": 1,
+      "playbackRate": 1.5,
+      "duration": 20.5,
+      "videoProcessing": false,
+      "muted": true,
+      "videoThumbnailUrl": "https://via.placeholder.com/3418x1668",
+      "size": {
+        "width": 3418,
+        "height": 1668
+      },
+      "assetId": "video-final"
+    },
+    {
+      "id": "step-cart-page",
+      "type": "IMAGE",
+      "url": "https://via.placeholder.com/3418x1668/FFFFFF/232F3E?text=Shopping+Cart",
+      "originalImageUrl": "https://via.placeholder.com/3418x1668",
+      "blurhash": "U5SiNz_Nxu^+@FQ-V@t700RP%MjGy@yDa0sA",
+      "hotspots": [],
+      "hasHTML": true,
+      "size": {
+        "height": 1668,
+        "width": 3418
+      },
+      "pageContext": {
+        "url": "https://www.amazon.com/gp/cart/view.html",
+        "title": "Amazon.com Shopping Cart",
+        "description": "",
+        "width": 1709,
+        "height": 834,
+        "language": "en-US"
+      },
+      "assetId": "step-cart-page"
+    },
+    {
+      "type": "CHAPTER",
+      "id": "chapter-outro",
+      "title": "Ready to checkout?",
+      "subtitle": "Your Sony headphones are waiting! Complete your purchase with fast, free Prime shipping.",
+      "theme": "light",
+      "paths": [
+        {
+          "id": "path-end",
+          "buttonText": "Shop on Amazon",
+          "buttonColor": "#FF9900",
+          "buttonTextColor": "#232F3E",
+          "url": "https://www.amazon.com",
+          "pathType": "url"
+        }
+      ]
+    }
+  ],
+  "processedAI": true,
+  "lastModifiedBy": "abcde123456",
+  "modified": {
+    "_seconds": 1729270900,
+    "_nanoseconds": 504000000
+  },
+  "customVariables": {
+    "first_name": {
+      "fallback": "",
+      "createdAt": {
+        "_seconds": 1729270899,
+        "_nanoseconds": 712000000
+      }
+    },
+    "company_name": {
+      "fallback": "",
+      "createdAt": {
+        "_seconds": 1729270899,
+        "_nanoseconds": 722000000
+      }
+    }
+  }
+}
