@@ -15,12 +15,19 @@ import {
   Paper,
   Chip,
   LinearProgress,
+  IconButton,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
 } from '@mui/material';
 import {
   CloudUpload,
   Assessment,
   CalendarToday,
   Layers,
+  Delete,
 } from '@mui/icons-material';
 import { useRouter } from 'next/navigation';
 
@@ -41,6 +48,9 @@ export default function HomePage() {
   const [uploadProgress, setUploadProgress] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [reportToDelete, setReportToDelete] = useState<string | null>(null);
+  const [deleting, setDeleting] = useState(false);
 
   const fetchReports = useCallback(async () => {
     try {
@@ -118,6 +128,46 @@ export default function HomePage() {
       setUploading(false);
       setUploadProgress(0);
     }
+  };
+
+  const handleDeleteClick = (reportId: string, event: React.MouseEvent) => {
+    event.stopPropagation(); // Prevent card click navigation
+    setReportToDelete(reportId);
+    setDeleteDialogOpen(true);
+  };
+
+  const handleDeleteConfirm = async () => {
+    if (!reportToDelete) return;
+
+    setDeleting(true);
+    setError(null);
+
+    try {
+      const response = await fetch(`/api/delete?id=${reportToDelete}`, {
+        method: 'DELETE',
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to delete report');
+      }
+
+      setSuccess('Report deleted successfully');
+      await fetchReports(); // Refresh the list
+    } catch (err) {
+      console.error('Delete error:', err);
+      setError(err instanceof Error ? err.message : 'Failed to delete report');
+    } finally {
+      setDeleting(false);
+      setDeleteDialogOpen(false);
+      setReportToDelete(null);
+    }
+  };
+
+  const handleDeleteCancel = () => {
+    setDeleteDialogOpen(false);
+    setReportToDelete(null);
   };
 
   if (loading) {
@@ -285,6 +335,7 @@ export default function HomePage() {
                   flexDirection: 'column',
                   borderRadius: 3,
                   transition: 'transform 0.2s, box-shadow 0.2s',
+                  position: 'relative',
                   '&:hover': {
                     transform: 'translateY(-4px)',
                     boxShadow: 6,
@@ -292,6 +343,26 @@ export default function HomePage() {
                 }}
                 elevation={2}
               >
+                {/* Delete Button */}
+                <IconButton
+                  onClick={(e) => handleDeleteClick(report.id, e)}
+                  sx={{
+                    position: 'absolute',
+                    top: 8,
+                    right: 8,
+                    bgcolor: 'rgba(0, 0, 0, 0.6)',
+                    color: 'white',
+                    transition: 'background-color 0.2s',
+                    zIndex: 1,
+                    '&:hover': {
+                      bgcolor: 'error.main',
+                    },
+                  }}
+                  size="small"
+                >
+                  <Delete fontSize="small" />
+                </IconButton>
+
                 <CardActionArea
                   onClick={() => router.push(`/reports/${report.id}`)}
                   sx={{
@@ -342,6 +413,36 @@ export default function HomePage() {
             ))}
           </Box>
         )}
+
+        {/* Delete Confirmation Dialog */}
+        <Dialog
+          open={deleteDialogOpen}
+          onClose={handleDeleteCancel}
+          aria-labelledby="delete-dialog-title"
+        >
+          <DialogTitle id="delete-dialog-title">Delete Report?</DialogTitle>
+          <DialogContent>
+            <DialogContentText>
+              Are you sure you want to delete this report? This will permanently
+              remove the flow data, analysis, and generated image. This action
+              cannot be undone.
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleDeleteCancel} disabled={deleting}>
+              Cancel
+            </Button>
+            <Button
+              onClick={handleDeleteConfirm}
+              color="error"
+              variant="contained"
+              disabled={deleting}
+              startIcon={deleting ? <CircularProgress size={16} /> : <Delete />}
+            >
+              {deleting ? 'Deleting...' : 'Delete'}
+            </Button>
+          </DialogActions>
+        </Dialog>
       </Container>
     </Box>
   );
